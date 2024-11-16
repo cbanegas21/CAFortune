@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hain Celestial Brands</title>
+    <!-- Link to Google Fonts for Montserrat -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #1d603b;
+            background: linear-gradient(180deg, #b5e48c, #52b788); /* Green gradient background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 50px 20px; /* Increased padding at the top */
+            background-color: rgba(0, 0, 0, 0); /* Transparent background */
+            position: relative;
+        }
+
+        .header img {
+            position: absolute;
+            left: 20px; /* Adjust padding for logo */
+            height: 150px; /* Logo height */
+            max-height: 100%; /* Ensures it doesn’t overflow the header */
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #1d603b;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Subtitle Styling */
+        h2 {
+            font-size: 1.5em;
+            color: #1d603b;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Gallery Grid Styling */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Individual Image Container */
+        .gallery a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 250px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+            transition: transform 0.3s;
+        }
+
+        /* Hover Effects */
+        .gallery a:hover img {
+            transform: scale(1.1);
+        }
+        .gallery a:hover {
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #fff;
+            background: #1d603b;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffe14a;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .header img {
+                height: 120px; /* Smaller logo for tablets */
+            }
+
+            .header h1 {
+                font-size: 2em; /* Smaller title font */
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header img {
+                height: 100px; /* Smaller logo for phones */
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.2em; /* Smaller subtitle */
+            }
+
+            .gallery {
+                grid-template-columns: repeat(1, 1fr); /* One column for phones */
+            }
+
+            .gallery a {
+                height: 150px; /* Adjust image container height */
+                width: 200px; /* Adjust image container width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo and Title -->
+    <div class="header">
+        <img src="logo.png" alt="Hain Celestial Logo"> <!-- Logo aligned to the left -->
+        <h1>Hain Celestial Brands</h1>
+    </div>
+    
+    <h2>Click on the image and you will be able to go to the Power BI report</h2>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZGE2MTJjYzktMjNmZC00YTU3LWI5ZmEtODczNGEyOGEzODAwIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+            <img src="garden_of_eatin_tortilla.png" alt="Garden of Eatin' Tortilla">
+        </a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMTBlMTQ0YjAtMjU0Yi00ODBmLTk1MTctMWEzMTZlYTI4ZTQxIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+            <img src="earths_best.png" alt="Earth's Best">
+        </a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiNTAwM2QzOWUtZDdiZC00ZDc2LWEyZjYtNjJmODE5NTliODVjIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+            <img src="terra.png" alt="Terra">
+        </a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiYmM0NGI5NjQtNjQ2NS00ZGIyLTgzYTctMmZlODZjYmFhYTA1IiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+            <img src="celestial_tea.png" alt="Celestial Tea">
+        </a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMWY5YzQyOWItYTJjYi00NzY1LWJlOGYtODdhNjFlMjczYjEyIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+            <img src="parmcrisps.png" alt="ParmCrisps">
+        </a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiYzU1MDdhMmItOTMxYi00NDQ3LWEwY2EtY2NmZDRkYWNlMTcyIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+            <img src="imagine.png" alt="Imagine">
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Hain Celestial Brands. Made by Carlos Banegas from CAFortune.
+        <br>
+        <a href="https://www.hain.com" target="_blank">Visit Hain Celestial</a>
+    </footer>
+</body>
+</html>
