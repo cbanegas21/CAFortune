@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hain Celestial Brands</title>
-    <!-- Link to Google Fonts for Montserrat -->
+    <title>Hain Celestial Reports</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <style>
         /* General Body Styling */
@@ -13,7 +12,7 @@
             margin: 0;
             padding: 0;
             color: #1d603b;
-            background: linear-gradient(180deg, #b5e48c, #52b788); /* Green gradient background */
+            background: linear-gradient(180deg, #b5e48c, #52b788);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -24,20 +23,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 50px 50px 20px; /* Increased padding at the top */
-            background-color: rgba(0, 0, 0, 0); /* Transparent background */
+            padding: 50px 50px 20px;
+            background-color: rgba(0, 0, 0, 0);
             position: relative;
         }
 
         .header img {
             position: absolute;
-            left: 20px; /* Adjust padding for logo */
-            height: 150px; /* Logo height */
-            max-height: 100%; /* Ensures it doesn’t overflow the header */
+            left: 20px;
+            height: 100px;
         }
 
         .header h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             color: #1d603b;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
             font-weight: 700;
@@ -45,42 +43,64 @@
             text-align: center;
         }
 
-        /* Subtitle Styling */
+        /* Section Title */
         h2 {
             font-size: 1.5em;
             color: #1d603b;
-            margin-bottom: 40px;
             text-align: center;
+            margin-top: 30px;
         }
 
-        /* Gallery Grid Styling */
+        /* Gallery Container */
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 0 20px;
         }
 
-        /* Individual Image Container */
-        .gallery a {
+        /* Individual Container (Caption + Image) */
+        .gallery div {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 200px;
-            width: 250px;
+            justify-content: flex-start;
+            width: 150px; /* Fixed width */
+            height: 200px; /* Fixed height for consistent layout */
+            box-sizing: border-box;
+        }
+
+        /* Caption Styling */
+        .gallery .caption {
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: 700;
+            color: #1d603b;
+            max-width: 150px;
+            word-wrap: break-word;
+            line-height: 1.2; /* Adjusts spacing between lines */
+            margin-bottom: 5px;
+        }
+
+        /* Button Styling */
+        .gallery a {
+            display: block;
+            width: 150px; /* Matches the container width */
+            height: 120px; /* Ensures all buttons are the same height */
             overflow: hidden;
             border: 2px solid rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             transition: transform 0.3s, box-shadow 0.3s;
-            margin: 0 auto;
+            flex-shrink: 0; /* Prevents shrinking of buttons */
         }
 
         .gallery img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the image covers the container */
+            object-fit: cover; /* Ensures images fit neatly inside buttons */
             transition: transform 0.3s;
         }
 
@@ -88,6 +108,7 @@
         .gallery a:hover img {
             transform: scale(1.1);
         }
+
         .gallery a:hover {
             box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
             transform: scale(1.05);
@@ -111,80 +132,106 @@
         footer a:hover {
             text-decoration: underline;
         }
-
-        /* Responsive Styles */
-        @media (max-width: 1024px) {
-            .header img {
-                height: 120px; /* Smaller logo for tablets */
-            }
-
-            .header h1 {
-                font-size: 2em; /* Smaller title font */
-            }
-
-            .gallery {
-                grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header img {
-                height: 100px; /* Smaller logo for phones */
-            }
-
-            .header h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.2em; /* Smaller subtitle */
-            }
-
-            .gallery {
-                grid-template-columns: repeat(1, 1fr); /* One column for phones */
-            }
-
-            .gallery a {
-                height: 150px; /* Adjust image container height */
-                width: 200px; /* Adjust image container width */
-            }
-        }
     </style>
 </head>
 <body>
     <!-- Header with Logo and Title -->
     <div class="header">
-        <img src="logo.png" alt="Hain Celestial Logo"> <!-- Logo aligned to the left -->
-        <h1>Hain Celestial Brands</h1>
+        <img src="logo.png" alt="Hain Celestial Logo">
+        <h1>Hain Celestial Reports</h1>
     </div>
-    
-    <h2>Click on the image and you will be able to go to the Power BI report</h2>
 
-    <!-- Gallery -->
+    <!-- Data Reports Section -->
+    <h2>Data Reports</h2>
     <div class="gallery">
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiZGE2MTJjYzktMjNmZC00YTU3LWI5ZmEtODczNGEyOGEzODAwIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
-            <img src="garden_of_eatin_tortilla.png" alt="Garden of Eatin' Tortilla">
-        </a>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiMTBlMTQ0YjAtMjU0Yi00ODBmLTk1MTctMWEzMTZlYTI4ZTQxIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
-            <img src="earths_best.png" alt="Earth's Best">
-        </a>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiNTAwM2QzOWUtZDdiZC00ZDc2LWEyZjYtNjJmODE5NTliODVjIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
-            <img src="terra.png" alt="Terra">
-        </a>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiYmM0NGI5NjQtNjQ2NS00ZGIyLTgzYTctMmZlODZjYmFhYTA1IiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
-            <img src="celestial_tea.png" alt="Celestial Tea">
-        </a>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiMWY5YzQyOWItYTJjYi00NzY1LWJlOGYtODdhNjFlMjczYjEyIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
-            <img src="parmcrisps.png" alt="ParmCrisps">
-        </a>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiYzU1MDdhMmItOTMxYi00NDQ3LWEwY2EtY2NmZDRkYWNlMTcyIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
-            <img src="imagine.png" alt="Imagine">
-        </a>
+        <div>
+            <div class="caption">Garden of Eatin' Tortilla Data Report</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiZGE2MTJjYzktMjNmZC00YTU3LWI5ZmEtODczNGEyOGEzODAwIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="garden_of_eatin_tortilla.png" alt="Garden of Eatin' Tortilla">
+            </a>
+        </div>
+        <div>
+            <div class="caption">Earth's Best Data Report</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiMTBlMTQ0YjAtMjU0Yi00ODBmLTk1MTctMWEzMTZlYTI4ZTQxIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="earths_best.png" alt="Earth's Best">
+            </a>
+        </div>
+        <div>
+            <div class="caption">Terra Data Report</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNTAwM2QzOWUtZDdiZC00ZDc2LWEyZjYtNjJmODE5NTliODVjIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="terra.png" alt="Terra">
+            </a>
+        </div>
+        <div>
+            <div class="caption">Celestial Tea Data Report</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiYmM0NGI5NjQtNjQ2NS00ZGIyLTgzYTctMmZlODZjYmFhYTA1IiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="celestial_tea.png" alt="Celestial Tea">
+            </a>
+        </div>
+        <div>
+            <div class="caption">ParmCrisps Data Report</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiMWY5YzQyOWItYTJjYi00NzY1LWJlOGYtODdhNjFlMjczYjEyIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="parmcrisps.png" alt="ParmCrisps">
+            </a>
+        </div>
+        <div>
+            <div class="caption">Imagine Data Report</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiYzU1MDdhMmItOTMxYi00NDQ3LWEwY2EtY2NmZDRkYWNlMTcyIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="imagine.png" alt="Imagine">
+            </a>
+        </div>
+    </div>
+
+    <!-- Executive Reports Section -->
+    <h2>Executive Reports</h2>
+    <div class="gallery">
+        <div>
+            <div class="caption">Earth Formula Executive Summary</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiZGU5YWUwNjAtNGI5Mi00YjA2LTkzNzYtZWQzYzdjNjJlZDExIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="earths_best.png" alt="Earth Formula Executive Summary">
+            </a>
+        </div>
+        <div>
+            <div class="caption">Garden of Eatin' Executive Summary</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiYjA1YjFmZjQtMjI1ZC00NDZkLTgwYTUtM2NmMmI5NTNmMmIxIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="garden_of_eatin_tortilla.png" alt="Garden of Eatin' Executive Summary">
+            </a>
+        </div>
+        <div>
+            <div class="caption">Garden Veggie Straws Executive Summary</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiZTM5YjRmODAtYzhmNy00MGFlLWE3MzYtMjBhNjI5NmUzMTVlIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="garden_veggie.png" alt="Garden Veggie Straws Executive Summary">
+            </a>
+        </div>
+        <div>
+            <div class="caption">Hain Executive Summary</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiMGQ4NTYzNmUtMTQ2My00NThjLTgxYTUtMGU5ZTk0ZTNhMmVhIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="logo.png" alt="Hain Executive Summary">
+            </a>
+        </div>
+        <div>
+            <div class="caption">ParmCrisps Executive Summary</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiZGU5YjExMmUtZWM2NS00NjE5LTg0YTctZjhlZmJhNWI2ZTkwIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="parmcrisps.png" alt="ParmCrisps Executive Summary">
+            </a>
+        </div>
+        <div>
+            <div class="caption">Terra Executive Summary</div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiZjU1NzkyMTQtMjBlMS00MjczLWIyNzItNjQ3NDFiZGQ5OTI5IiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9" target="_blank">
+                <img src="terra.png" alt="Terra Executive Summary">
+            </a>
+        </div>
+        <div>
+            <div class="caption">Celestial Tea Executive Summary</div>
+            <a href="#" target="_blank">
+                <img src="celestial_tea.png" alt="Celestial Tea Executive Summary">
+            </a>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        &copy; 2024 Hain Celestial Brands. Made by Carlos Banegas from CAFortune.
+        &copy; 2024 Hain Celestial Reports. Made by Carlos Banegas from CAFortune.
         <br>
         <a href="https://www.hain.com" target="_blank">Visit Hain Celestial</a>
     </footer>
